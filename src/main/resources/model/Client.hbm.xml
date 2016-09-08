@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.Client" table="client">
+
+        <id name="clientId" type="java.lang.Integer" column="id">
+            <!--<column name="id" unique="true" not-null="true"/>-->
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="fio" length="255" not-null="true" unique="true" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="address" length="255" not-null="false" unique="false" />
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="age" length="4" not-null="false" unique="false"/>
+        </property>
+        <property name="weight" type="java.lang.Integer">
+            <column name="weight" length="4" not-null="false" unique="false"/>
+        </property>
+        <property name="height" type="java.lang.Integer">
+            <column name="height" length="4" not-null="false" unique="false"/>
+        </property>
+        <property name="sex" type="java.lang.Integer">
+            <column name="sex" length="1" not-null="false" unique="false"/>
+        </property>
+        <property name="phoneNumber" type="java.lang.String">
+            <column name="phoneNumber" length="30" not-null="false" unique="false"/>
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="email" length="255" not-null="false" unique="false"/>
+        </property>
+    </class>
+</hibernate-mapping>
